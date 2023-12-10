@@ -22,13 +22,9 @@ int main() {
     char order;
     for (int i=0; i<m; i++) {
         cin >> order;
-        if (order == 'L') {
-            if (*l.begin() != *it) it--;
-        }
-        else if (order == 'R') {
-            if (*l.end() != *it) it++;
-        }
-        else if (order == 'D') {
+        if (order == 'L' && *l.begin() != *it) it--;
+        else if (order == 'R' && *l.end() != *it) it++;
+        else if (order == 'D' && *l.end() != *it) {
             it = l.erase(it);
         }
         else {
