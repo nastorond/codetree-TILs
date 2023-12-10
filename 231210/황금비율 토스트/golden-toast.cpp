@@ -16,8 +16,7 @@ int main() {
         cin >> c;
         l.push_back(c);
     }
-    it = l.begin();
-    for(int i=0;i<n;i++) it++;
+    it = l.end();
 
     char order;
     for (int i=0; i<m; i++) {
