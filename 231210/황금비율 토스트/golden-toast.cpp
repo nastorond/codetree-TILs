@@ -23,12 +23,13 @@ int main() {
     char order;
     for (int i=0; i<m; i++) {
         cin >> order;
+
         if (order == 'L' && l.begin() != it) it--;
         else if (order == 'R' && l.end() != it) it++;
         else if (order == 'D' && l.end() != it) {
             it = l.erase(it);
         }
-        else {
+        else if (order == 'P') {
             cin >> c;
             l.insert(it, c);
         }
